@@ -1,7 +1,7 @@
 <h1>API REST TRAILERFLIX</h1>
 <p>Proyecto final Argentina Programa 4.0 tramo 2</p>
 
-<img src="https://img.freepik.com/vector-gratis/banner-cine-linea-tablero-chapaleta-abierto-tira-pelicula_1419-2242.jpg?w=2000" alt="Banner Cine" width="100%" />
+<!-- <img src="https://img.freepik.com/vector-gratis/banner-cine-linea-tablero-chapaleta-abierto-tira-pelicula_1419-2242.jpg?w=2000" alt="Banner Cine" width="100%" /> -->
 
 
 <h2> Introducción</h2>
@@ -9,21 +9,24 @@ Esta documentación te guiará a realizar diferentes consultas hacia la API.
 
 </br>
 
-- [EJS](#ejs)
-  - [Rutas Catalogo](#rutas-catalogo)
-  - [Rutas Categorias](#rutas-categorias)
-  - [Rutas Generos](#rutas-generos)
-  - [Ejemplos de uso](#ejemplos-de-uso)
-    - [GET contenidos](#get-contenidos)
-    - [GET contenido por ID](#get-contenido-por-id)
-    - [GET contenido por Nombre](#get-contenido-por-nombre)
-    - [GET contenidos por Categoria](#get-contenidos-por-categoria)
-    - [POST de Categoria](#post-de-categoria)
-    - [DELETE](#delete)
+- [Instalación](#instalación)
+  - [.env](#env)
+  - [Dependencias:](#dependencias)
+  - [EJS](#ejs)
+- [Rutas Catalogo](#rutas-catalogo)
+- [Rutas Categorias](#rutas-categorias)
+- [Rutas Generos](#rutas-generos)
+- [Ejemplos de uso](#ejemplos-de-uso)
+  - [GET contenidos](#get-contenidos)
+  - [GET contenido por ID](#get-contenido-por-id)
+  - [GET contenido por Nombre](#get-contenido-por-nombre)
+  - [GET contenidos por Categoria](#get-contenidos-por-categoria)
+  - [POST de Categoria](#post-de-categoria)
+  - [DELETE de generos](#delete-de-generos)
 
 
 
-## Instalación
+# Instalación
 
 ## .env
 Deberás crear en tu carpeta raíz un archivo de conexion a tu base de datos con nombre ".env" donde incluirás las siguientes variables con tu informacion personal:
@@ -34,7 +37,7 @@ DB_PASSWORD = "root"
 DB_HOST = "localhost"
 ```
 
-### Dependencias:
+## Dependencias:
 Asumiendo que tiene node.js preinstalado, asegurese de que su terminal este posicionada en la carpeta raiz del proyecto y ejecute  el siguiente comando para instalar todas las dependencias necesarias:
 ```
 npm install
@@ -46,9 +49,9 @@ npm start
 ```
 Comienza a realizar peticiones desde Thunder Client, Postman, u otra alternativa
 
-<br>
 
-# EJS
+
+## EJS
 Opcionalmente puedes visualizar el proyecto desde el navegador a traves de la URL base http://localhost:3000
 
 ![image](/public/img/example_readme.png)
@@ -56,7 +59,7 @@ Opcionalmente puedes visualizar el proyecto desde el navegador a traves de la UR
 
 <br>
 
-## Rutas Catalogo
+# Rutas Catalogo
 |MÉTODO|URL|DESCRIPCION|
 |-|-|-|
 |GET|http://localhost:3000/|La URL o ruta principal
@@ -68,7 +71,7 @@ Opcionalmente puedes visualizar el proyecto desde el navegador a traves de la UR
 
 <br>
 
-## Rutas Categorias
+# Rutas Categorias
 |MÉTODO|URL|DESCRIPCION|
 |-|-|-|
 |GET| http://localhost:3000/categorias | La URL que nos permite visualizar todas las categorias
@@ -77,7 +80,7 @@ Opcionalmente puedes visualizar el proyecto desde el navegador a traves de la UR
 
 <br>
 
-## Rutas Generos
+# Rutas Generos
 |MÉTODO|URL|DESCRIPCION|
 |-|-|-|
 |GET| http://localhost:3000/generos | La URL que nos permite visualizar todos los generos
@@ -86,8 +89,8 @@ Opcionalmente puedes visualizar el proyecto desde el navegador a traves de la UR
 
 <br>
 
-## Ejemplos de uso
-### GET contenidos
+# Ejemplos de uso
+## GET contenidos
 Todas las consultas de tipo GET retornarán un formato JSON.
 
 La URL general para visualizar todos los contenidos.
@@ -120,12 +123,7 @@ http://localhost:3000/api/catalogo
 }
 ```
 
-
-<br>
-
-
-
-### GET contenido por ID
+## GET contenido por ID
 La URL general para visualizar un contenido por su id
 ```py
 http://localhost:3000/api/catalogo/2 
@@ -145,12 +143,7 @@ http://localhost:3000/api/catalogo/2
 ```
 
 
-<br>
-
-
-
-
-### GET contenido por Nombre
+## GET contenido por Nombre
 La URL que nos retorna un contenido/s por su nombre o parte de él.
 ```py
 http://localhost:3000/api/catalogo/nombre/Riverdale
@@ -170,14 +163,7 @@ http://localhost:3000/api/catalogo/nombre/Riverdale
 ```
 
 
-
-<br>
-
-
-
-
-
-### GET contenidos por Categoria
+## GET contenidos por Categoria
 La URL que nos retorna un contenido/s por su categoria.
 ```py
 http://localhost:3000/api/catalogo/categoria/serie
@@ -197,10 +183,8 @@ http://localhost:3000/api/catalogo/categoria/serie
 }
 ```
 
-<br>
 
-
-### POST de Categoria
+## POST de Categoria
 La URL que nos permite dar de alta un recurso.
 Deberás enviar en el cuerpo (body) de la solicitud un documento en formato JSON.
 De resultar exitosa la operación, se retornará como respuesta el mismo documento.
@@ -221,10 +205,7 @@ Response:
   }
 ```
 
-<br>
-
-
-### DELETE 
+## DELETE de generos
 La URL que nos permite eliminar un recurso existente
 ```py
 http://localhost:3000/generos/20
