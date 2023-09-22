@@ -1,0 +1,64 @@
+<%- include('head') %>
+<body>
+
+    <header>
+        <img src="/img/banner.png" alt="">
+    </header>
+
+    <h1>TRAILERFLIX</h1>
+
+    <div class="row">
+
+        <div class="container col s9">
+            <div class="pelicula-container">
+
+                <% for(let i=0; i<data.peliculas.length;i++){%>
+                    <div class="pelicula row">
+
+                        <div class="pelicula-poster col s3">
+                            <img src="/img<%=data.peliculas[i].poster%>" alt="">
+
+                            <% if (data.peliculas[i].trailer !== null) { %>
+                                <a target="_blank" class="btn" href="<%= data.peliculas[i].trailer%>">Trailer</a>
+                            <% } %>
+                            
+                        </div>
+                        <div class="pelicula-info col s9">
+                            <h4 class="pelicula-info-titulo"><%= data.peliculas[i].titulo %></h4>
+                            <p class="pelicula-info-categoria"><b>Categoria:</b> <%= data.peliculas[i].categoria %></p>
+                            <p class="pelicula-info-generos"><b>Generos:</b> <%= data.peliculas[i].generos %></p> <!--ver-->
+                            <p class="pelicula-info-temporadas">
+                                <% if (data.peliculas[i].temporadas > 0) { %>
+                                    <b>Temporadas:</b> <%= data.peliculas[i].temporadas %>
+                                <% } else { %>
+                                    
+                                <% } %>
+                            </p>
+                            <p class="pelicula-info-resumen"><b>Resumen:</b> <%= data.peliculas[i].resumen %></p>
+                            <p class="pelicula-info-actores"><b>Actores:</b> <%= data.peliculas[i].actores %></p>
+                        </div>
+                        
+
+                    </div>
+                <% } %>
+
+            </div>
+        </div>
+
+        <div class="container-pelicula-sidebar col s3">
+                <h5>Recomendadas</h5>
+                <% for(let i=0; i<data.peliculas.length - 1;i++){%>
+                    <div class="pelicula-sidebar">
+                            <img src="/img/<%=data.peliculas[i].poster%>" alt="">                                      
+                    </div>
+                <% } %>
+        </div>
+
+
+        <img class="publicidad" src="/img/PopMerch_v3.jpg">
+    </div>
+    
+    <%- include('footer.ejs') %>
+
+</body>
+</html>

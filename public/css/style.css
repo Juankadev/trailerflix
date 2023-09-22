@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(15, 12, 19);
+    color:aliceblue;
+    width: 100%;
+    padding: 1.5rem 3rem;
+}
+
+header{
+    width: 100%;
+    overflow: hidden;
+}
+header img{
+    width: 100%;
+}
+
+.pelicula{
+    width: 100%;
+    display: flex;
+    gap: 0rem;
+    transition: .5s;
+    padding: 1rem;
+    background-color: rgb(23, 18, 29);
+}
+
+
+.pelicula-poster a{
+    width: 100%;
+    border-radius: .5rem;
+    background-color: #412169;
+}
+.pelicula-poster a:hover{
+    background-color: #412169;
+}
+.pelicula-poster img{
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: fill;
+}
+
+.pelicula-info h4,h1{
+    font-weight: bold;
+}
+
+h1{
+    text-align: center;
+    margin: 0 0;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.pelicula-info .pelicula-info-resumen, 
+.pelicula-info-categoria, 
+.pelicula-info-generos,
+.pelicula-info-actores,
+.pelicula-info-temporadas{
+    color:rgb(180, 164, 205)
+}
+
+.pelicula-info-resumen{
+    margin: 1rem 0;
+}
+
+
+
+/*SIDEBAR*/
+.container-pelicula-sidebar{
+    background-color: rgb(23, 18, 29);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10%;
+    row-gap: 1rem;
+}
+
+.pelicula-sidebar{
+    width: 40%;
+    overflow: hidden;
+    border-radius: .5rem;
+}
+
+.pelicula-sidebar img{
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    object-fit: contain;
+}
+
+
+.publicidad{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 15%;
+    transition:.5s
+}
+.publicidad:hover{
+    width: 17%;
+}
+
+
+
+footer{
+    color: aliceblue;
+}
+
+/*RESPONSIVE*/
+@media only screen and (min-width: 993px){
+    .container {
+        width: 100%;
+    }
+}
