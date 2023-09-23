@@ -10,6 +10,7 @@ Esta documentación te guiará a realizar diferentes consultas hacia la API.
 </br>
 
 - [Instalación](#instalación)
+  - [Base de datos](#base-de-datos)
   - [.env](#env)
   - [Dependencias:](#dependencias)
   - [EJS](#ejs)
@@ -28,8 +29,11 @@ Esta documentación te guiará a realizar diferentes consultas hacia la API.
 
 # Instalación
 
+## Base de datos
+En MySQL ejecuta el archivo **trailerflix_db.sql** que se encuentra en la carpeta **config**
+
 ## .env
-Deberás crear en tu carpeta raíz un archivo de conexion a tu base de datos con nombre ".env" donde incluirás las siguientes variables con tu informacion personal:
+Deberás crear en tu carpeta raíz un archivo de conexion a tu base de datos con nombre **".env"** donde incluirás las siguientes variables con tu informacion local:
 ```javascript
 DB_SCHEMA = "trailerflix"
 DB_USER = "root"
