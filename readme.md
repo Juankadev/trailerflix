@@ -31,6 +31,7 @@ Esta documentación te guiará a realizar diferentes consultas hacia la API.
 
 ## Base de datos
 En MySQL ejecuta el archivo **trailerflix_db.sql** que se encuentra en la carpeta **config**
+<img src="trailerflix_DER.png" alt="DER" width="100%" />
 
 ## .env
 Deberás crear en tu carpeta raíz un archivo de conexion a tu base de datos con nombre **".env"** donde incluirás las siguientes variables con tu informacion local:
